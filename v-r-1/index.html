@@ -50,7 +50,7 @@ ROOM 1
 0,c,0,0,0,0,f,k,l,0,0,0,0,d,0,0
 0,c,0,0,0,0,0,0,0,0,0,0,0,d,0,0
 0,c,0,0,0,0,0,k,0,0,0,0,0,d,0,0
-0,n,e,e,e,e,e,k,e,e,e,e,e,d,0,0
+0,n,e,e,e,e,e,o,e,e,e,e,e,d,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -166,14 +166,14 @@ NAME landscape_2
 
 TIL k
 11000011
+11000010
 11000011
+11000010
 11000011
+11000010
 11000011
-11000011
-11000011
-11000011
-11000011
-NAME middle_wall
+11000010
+NAME door_to_door_middle_wall
 WAL true
 
 TIL l
@@ -212,6 +212,18 @@ TIL n
 NAME left_wall_bottom
 WAL true
 
+TIL o
+11000011
+11000011
+11000011
+11000011
+11000011
+11000011
+11000011
+11000011
+NAME door_to_door_middle_wall_bottom
+WAL true
+
 SPR A
 00011000
 00111100
@@ -232,7 +244,7 @@ SPR a
 11111110
 10101010
 00000000
-NAME radiator
+NAME start_radiator
 DLG SPR_1
 POS 0 7,5
 
@@ -245,7 +257,7 @@ SPR b
 00011000
 00011000
 00000000
-NAME tube
+NAME start_tube
 DLG SPR_0
 POS 0 9,9
 
@@ -258,7 +270,7 @@ SPR c
 01111110
 01111110
 00000000
-NAME box
+NAME start_trunk
 DLG SPR_3
 POS 0 8,9
 
@@ -271,7 +283,7 @@ SPR d
 01100000
 01100000
 01100000
-NAME bed_top_left
+NAME start_bed_1
 POS 0 5,8
 
 SPR e
@@ -283,7 +295,7 @@ SPR e
 00000110
 00000110
 00000110
-NAME bed_top_right
+NAME start_bed_2
 DLG SPR_2
 POS 0 6,8
 
@@ -296,7 +308,7 @@ SPR f
 01110000
 01110000
 00111111
-NAME bed_bottom_left
+NAME start_bed_4
 POS 0 5,9
 
 SPR g
@@ -308,7 +320,7 @@ SPR g
 00001110
 00001110
 11111100
-NAME bed_bottom_right
+NAME start_bed_3
 POS 0 6,9
 
 SPR h
@@ -320,7 +332,7 @@ SPR h
 01111111
 01010101
 00000000
-NAME radiator2
+NAME door_to_door_radiator_r
 POS 1 10,5
 
 SPR i
@@ -332,7 +344,7 @@ SPR i
 00011000
 00011000
 00000000
-NAME tube2
+NAME door_to_door_tube_r
 POS 1 8,9
 
 SPR j
@@ -344,7 +356,7 @@ SPR j
 01111110
 01111110
 00000000
-NAME trunk2
+NAME door_to_door_trunk_r
 POS 1 9,9
 
 SPR k
@@ -356,7 +368,7 @@ SPR k
 01100000
 01100000
 01100000
-NAME bed_top_left_h_mirror
+NAME door_to_door_bed_r1
 POS 1 11,8
 
 SPR l
@@ -368,7 +380,7 @@ SPR l
 00000110
 00000110
 00000110
-NAME bed_top_right_h_mirror
+NAME door_to_door_bed_r2
 POS 1 12,8
 
 SPR m
@@ -380,7 +392,7 @@ SPR m
 01110000
 01110000
 00111111
-NAME bed_bottom_left_h_mirror
+NAME door_to_door_bed_r4
 POS 1 11,9
 
 SPR n
@@ -392,8 +404,92 @@ SPR n
 00001110
 00001110
 11111100
-NAME bed_bottom_right_h_mirror
+NAME door_to_door_bed_r3
 POS 1 12,9
+
+SPR o
+00000000
+01111110
+01111110
+01111110
+00000000
+01111110
+01111110
+00000000
+NAME door_to_door_trunk_l
+POS 1 5,9
+
+SPR p
+00000000
+00011000
+00011000
+00011000
+00011000
+00011000
+00011000
+00000000
+NAME door_to_door_tube_l
+POS 1 4,9
+
+SPR q
+00111111
+01111111
+01111111
+01100000
+01100000
+01100000
+01100000
+01100000
+NAME door_to_door_bed_l1
+POS 1 2,8
+
+SPR r
+11111100
+11111110
+11111110
+00000110
+00000110
+00000110
+00000110
+00000110
+NAME door_to_door_bed_l2
+POS 1 3,8
+
+SPR s
+00000110
+00000110
+00000110
+11111110
+00001110
+00001110
+00001110
+11111100
+NAME door_to_door_bed_l3
+POS 1 3,9
+
+SPR t
+01100000
+01100000
+01100000
+01111111
+01110000
+01110000
+01110000
+00111111
+NAME door_to_door_bed_l4
+POS 1 2,9
+
+SPR u
+00000000
+10101010
+11111110
+10101010
+10101010
+11111110
+10101010
+00000000
+NAME door_to_door_radiator_l
+POS 1 4,5
 
 ITM 0
 00000000
