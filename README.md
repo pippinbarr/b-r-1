@@ -3,8 +3,10 @@
 _b r 1_ (Bitsy Reality 1) is a [Bitsy](https://ledoux.itch.io/bitsy)-based remake of my earlier [Unity](http://unity3d.com)-based game [_v r 1_](http://www.pippinbarr.com/2016/05/19/v-r-1/) which was itself an attempt to "remake" Gregor Schneider's _u r 1_ from his [The Haus u r](https://en.wikipedia.org/wiki/Gregor_Schneider#The_%22Haus_u_r%22) project.
 
 #### [Play Online](https://pippinbarr.github.io/b-r-1/) (mobile- and tablet-friendly)
-#### [Process Documentation](https://github.com/pippinbarr/b-r-1/wiki)
-#### [Commit History](https://github.com/pippinbarr/b-r-1/commits/master)
+
+#### Read the [Closing Statement](https://github.com/pippinbarr/b-r-1/wiki/Closing-Statement), a short essay about the project
+#### Read the [Process Documentation](https://github.com/pippinbarr/b-r-1/wiki) for process journal entries, to dos, and manifestos
+#### Read the [Commit History](https://github.com/pippinbarr/b-r-1/commits/master) for detailed, moment-to-moment insights into the development process
 
 ---
 
