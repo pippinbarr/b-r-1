@@ -3727,7 +3727,7 @@ function hexColorDistance(hex1,hex2) {
 // source : http://axonflux.com/handy-rgb-to-hsl-and-rgb-to-hsv-color-model-c
 /* accepts parameters
  * h  Object = {h:x, s:y, v:z}
- * OR 
+ * OR
  * h, s, v
 */
 function HSVtoRGB(h, s, v) {
@@ -3757,7 +3757,7 @@ function HSVtoRGB(h, s, v) {
 
 /* accepts parameters
  * r  Object = {r:x, g:y, b:z}
- * OR 
+ * OR
  * r, g, b
 */
 function RGBtoHSV(r, g, b) {
@@ -6796,7 +6796,7 @@ var ExpNode = function(operator, left, right) {
 	this.Eval = function(environment,onReturn) {
 		// console.log("EVAL " + this.operator);
 		var self = this; // hack to deal with scope
-		environment.EvalOperator( this.operator, this.left, this.right, 
+		environment.EvalOperator( this.operator, this.left, this.right,
 			function(val){
 				// console.log("EVAL EXP " + self.operator + " " + val);
 				onReturn(val);
@@ -6909,7 +6909,7 @@ var ShuffleNode = function(options) {
 		// this.options[index].Eval( environment, onReturn );
 
 		optionsShuffled[index].Eval( environment, onReturn );
-		
+
 		index++;
 		if (index >= this.options.length) {
 			shuffle(this.options);
@@ -7505,7 +7505,7 @@ var Parser = function(env) {
 			}
 			return false;
 		}
-	
+
 		var operator = null;
 
 		// set is special because other operator can look like it, and it has to go first in the order of operations
@@ -7627,7 +7627,7 @@ var Parser = function(env) {
 
 		var codeState = new ParserState( new BlockNode(BlockMode.Code), codeStr );
 		codeState = ParseCode( codeState );
-		
+
 		state.curNode.AddChild( codeState.rootNode );
 
 		return state;
@@ -7658,7 +7658,7 @@ var DialogRenderer = function() {
 		left : 12,
 		bottom : 12, //for drawing it from the bottom
 	};
-	
+
 	var font = new Font();
 
 	var context = null;
@@ -7755,11 +7755,11 @@ var DialogRenderer = function() {
 						}
 					}
 
-					
+
 				}
 			}
 		}
-		
+
 		// call printHandler for character
 		char.OnPrint();
 	};
@@ -7803,7 +7803,7 @@ var DialogBuffer = function() {
 	var nextCharMaxTime = 50; // in milliseconds
 	var isDialogReadyToContinue = false;
 	var activeTextEffects = [];
-	
+
 	this.CurPage = function() { return buffer[ pageIndex ]; };
 	this.CurRow = function() { return this.CurPage()[ rowIndex ]; };
 	this.CurChar = function() { return this.CurRow()[ charIndex ]; };
@@ -8021,7 +8021,7 @@ var DialogBuffer = function() {
 		if( lastPage.length == 0 )
 			buffer.splice( buffer.length-1, 1 );
 
-		//finish up 
+		//finish up
 		lastPage = buffer[ buffer.length-1 ];
 		lastRow = lastPage[ lastPage.length-1 ];
 		if( lastRow.length > 0 ) {
@@ -8375,7 +8375,7 @@ function setInitialVariables() {
 // 	var off = getOffset(e);
 // 	var x = Math.floor(off.x / (tilesize*scale));
 // 	var y = Math.floor(off.y / (tilesize*scale));
-	
+
 // 	//abort if you touch the square you're already on
 // 	if (player().x == x && player().y == y) {
 // 		return;
@@ -8919,7 +8919,7 @@ function movePlayer(direction) {
 		player().y += 1;
 		didPlayerMoveThisFrame = true;
 	}
-	
+
 	var ext = getExit( player().room, player().x, player().y );
 	var end = getEnding( player().room, player().x, player().y );
 	var itmIndex = getItemIndex( player().room, player().x, player().y );
@@ -9280,7 +9280,7 @@ function serializeWorld() {
 			// old non-comma separated format
 			for (i in room[id].tilemap) {
 				for (j in room[id].tilemap[i]) {
-					worldStr += room[id].tilemap[i][j];	
+					worldStr += room[id].tilemap[i][j];
 				}
 				worldStr += "\n";
 			}
@@ -9538,7 +9538,7 @@ function parseRoom(lines, i) {
 				};
 			}
 			else if ( flags.ROOM_FORMAT == 0 ) { // TODO: right now this shortcut only works w/ the old comma separate format
-				/* PLACE MULTIPLE SPRITES*/ 
+				/* PLACE MULTIPLE SPRITES*/
 				//Does find and replace in the tilemap (may be hacky, but its convenient)
 				var sprList = sprId.split(",");
 				for (row in room[id].tilemap) {
@@ -10148,7 +10148,7 @@ function getRoomPal(roomId) {
 			return "0";
 		}
 	}
-	return "0";	
+	return "0";
 }
 
 var isDialogMode = false;
@@ -10229,7 +10229,7 @@ function startDialog(dialogStr,scriptId) {
 	};
 
 	if(scriptId === undefined) {
-		scriptInterpreter.Interpret( dialogStr, onScriptEnd );		
+		scriptInterpreter.Interpret( dialogStr, onScriptEnd );
 	}
 	else {
 		if( !scriptInterpreter.HasScript(scriptId) )
@@ -10271,6 +10271,16 @@ var scriptUtils = scriptModule.CreateUtils(); // TODO: move to editor.js?
 <body onload='startExportedGame()'>
 	<!-- GAME CANVAS -->
 	<canvas id='game'></canvas>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-90628419-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 
 
